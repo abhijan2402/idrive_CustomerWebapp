@@ -1,0 +1,85 @@
+.header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-menubar i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container-fluids {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Notification Icon */
+.notification {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification .bi-bell {
+    font-size: 24px;
+    color: #333;
+}
+
+.notification .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* Profile Icon */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile .bi-person-circle {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 120px;
+    padding: 5px 0;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-menu p:hover {
+    background-color: #f4f4f4;
+}

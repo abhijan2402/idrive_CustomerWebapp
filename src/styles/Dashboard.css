@@ -1,0 +1,9 @@
+.dashboard-container {}
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.title-color {
+    color: black !important;
+}
