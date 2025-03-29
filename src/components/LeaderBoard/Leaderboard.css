@@ -1,0 +1,249 @@
+.leaderboard-container {
+    background-color: #fff;
+    border-color: .5px solid #14B19E;
+    padding: 1rem 1.1rem;
+}
+
+.leadeboard-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leaderboard-tabs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+}
+
+.leaderboard-title h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.leaderboard-title span {
+    background-color: #14B19E;
+    color: aliceblue;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.leaderboard-tabs li {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: rgb(77, 77, 78);
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.leaderboard-tabs li.active {
+    background-color: #14B19E;
+    color: aliceblue;
+}
+
+.leaderboard-content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rating-section {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.driver-list-section {
+    width: 50%;
+}
+
+.driver-list-section {}
+
+.driver-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .5px solid rgba(128, 128, 128, 0.46);
+    padding-bottom: .6rem;
+    padding: .4rem 1rem;
+}
+
+.driver-srno {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.driver-srno img {
+    height: 35px;
+    border-radius: 50%;
+}
+.driver-srno p {
+    font-size: 12px;
+    font-weight: 600;
+}
+.driver-srno span {
+    font-size: 12px;
+    font-weight: 600;
+}
+.driver-trip-count{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 1 */
+
+.top-rating-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 60px;
+}
+
+.top-rating-head span {
+    color: #F4A164;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.top-rating-head img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.top-rating-position {
+    height: 110px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4A164;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+
+.top-rating-position span {
+    background-color: #fff;
+    color: #F4A164;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 4px 10px;
+    margin-top: 8px;
+}
+
+.top-rating-position p {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* 2 */
+
+.top-rating-position-2 {
+    height: 180px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #14B19E;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+
+.top-rating-position-2 span {
+    background-color: #fff;
+    color: #14B19E;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 4px 10px;
+    margin-top: 8px;
+}
+
+.top-rating-position-2 p {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.top-rating-head-2 span {
+    color: #14B19E;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.top-rating-head-2 img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.top-rating-head-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 60px;
+}
+
+/* 3 */
+.top-rating-position-3 {
+    height: 150px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFE6AD;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+
+.top-rating-position-3 span {
+    background-color: #fff;
+    color: #d39505;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 4px 10px;
+    margin-top: 8px;
+}
+
+.top-rating-position-3 p {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #d39505;
+    font-weight: 700;
+}
+
+.top-rating-head-3 span {
+    color: #d39505;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.top-rating-head-3 img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.top-rating-head-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 60px;
+}

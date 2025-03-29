@@ -1,0 +1,141 @@
+/* Container */
+.trip-heatmap-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* Header */
+.trip-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 1px;
+}
+
+.trip-header {
+
+    border-radius: 8px;
+}
+
+.trip-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.trip-header p {
+    color: gray;
+}
+
+/* Controls */
+.trip-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    gap: 8px;
+}
+
+.date-picker {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.overview-btn {
+    background-color: #14B19E;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.compare-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Content Layout */
+.trip-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+/* Zone List */
+.trip-zones {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trip-zones h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    margin: 10px 0;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+}
+
+.search-btn {
+    background-color: #14B19E;
+    color: white;
+    padding: 10px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Zone List Items */
+.zone-list {
+    list-style: none;
+    padding: 0;
+}
+
+.zone-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.zone-checkbox {
+    margin-right: 10px;
+}
+
+.zone-name {
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.zone-stats {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Map Section */
+.trip-map {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}

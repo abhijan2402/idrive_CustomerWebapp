@@ -1,0 +1,121 @@
+.update-profile-container {
+    /* max-width: 1000px; */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.profile-form {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.profile-fields {
+    flex: 2;
+}
+
+.profile-image-section {
+    flex: 1;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-input select {
+    width: 25%;
+}
+
+.phone-input input {
+    flex: 1;
+}
+
+.password-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-input input {
+    width: 100%;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.profile-image-placeholder {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    background: #f3f3f3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-info {
+    font-size: 12px;
+    color: gray;
+}
+
+.save-btn {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    background: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background: darkcyan;
+}

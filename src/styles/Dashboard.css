@@ -7,3 +7,18 @@
 .title-color {
     color: black !important;
 }
+.dashboard-transaction-container {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.dashboard-transaction-container> :first-child {
+    flex: 2;
+}
+
+.dashboard-transaction-container> :last-child {
+    /* RecentTransactions */
+    flex: 1;
+    /* Takes less space */
+}

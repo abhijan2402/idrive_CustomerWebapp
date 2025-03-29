@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Aside from "../components/Aside/Aside";
 import "../styles/Dashboard.css";
+import LeaderBoard from "../components/LeaderBoard/LeaderBoard";
+import RecentTransactions from "../components/RecentTransactions/RecentTransactions";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import TripHeatMap from "../components/TripHeatMap/TripHeatMap";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -113,6 +117,20 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      {/* -------------- */}
+
+      {/* ---------------- */}
+      <div className="dashboard-transaction-container">
+        <LeaderBoard type={"Driver"} />
+        <RecentTransactions />
+      </div>
+      <div className="dashboard-transaction-container">
+        <LeaderBoard type={"Customer"} />
+        <RecentTransactions />
+      </div>
+      {/* ------------------ */}
+      <UpdateProfile />
+      <TripHeatMap />
     </div>
   );
 };
