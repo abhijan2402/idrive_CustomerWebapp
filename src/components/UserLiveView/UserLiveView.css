@@ -1,0 +1,233 @@
+/* UserLiveView.css */
+.user-live-view {
+    font-family: "Poppins", sans-serif;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.user-live-view-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+.user-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.user-header p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Alert Box */
+.alert-box {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 18px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-box .close-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #721c24;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs span {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+}
+
+.tabs .active {
+    color: #00a087;
+    font-weight: bold;
+    border-bottom: 2px solid #00a087;
+    padding-bottom: 2px;
+}
+
+.location-filter-container {
+    padding: 0 20px;
+}
+
+.location-filter {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+}
+
+/* Main Content */
+.content {
+    display: flex;
+}
+
+/* Driver List */
+.driver-list {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.driver-list h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.search-box button {
+    background: #00a087;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Driver Card */
+/* Custom Scrollbar for Driver List */
+.drivers {
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #00a087 #f1f1f1;
+    /* Scrollbar thumb and track color */
+}
+
+/* Webkit (Chrome, Safari) Scrollbar Styling */
+.drivers::-webkit-scrollbar {
+    width: 8px;
+    /* Scrollbar width */
+}
+
+.drivers::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Track color */
+    border-radius: 10px;
+}
+
+.drivers::-webkit-scrollbar-thumb {
+    background: #00a087;
+    /* Scrollbar thumb color */
+    border-radius: 10px;
+}
+
+.drivers::-webkit-scrollbar-thumb:hover {
+    background: #00775e;
+    /* Darker shade on hover */
+}
+
+.driver {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.driver .profile-icon {
+    font-size: 12px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.driver .info h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.driver .info p {
+    margin: 2px 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Map Section */
+.map-section {
+    flex: 2;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-search {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.map-container {
+    position: relative;
+    height: 300px;
+    background: #e0e0e0;
+    border-radius: 5px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.alert-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+}
