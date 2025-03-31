@@ -12,6 +12,7 @@
     background-color: var(--bs-white);
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease-in-out;
 
 }
 
@@ -25,7 +26,11 @@
 
 /* Sidebar collapsed (Hidden) */
 .aside-container.collapsed {
-    transform: translateX(-100%);
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
 }
 
 .admin-logo {
@@ -153,9 +158,54 @@ ul {
     color: #14B19E;
 }
 
+.trip-dropdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trip-submenu li {
+    margin-left: 14px;
+}
+
+
 /* Responsive: Hide sidebar in small screens */
 @media (max-width: 1200px) {
     .aside-container {
         /* transform: translateX(-100%); */
     }
+}
+
+.trip-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: .6rem;
+    font-weight: 500;
+    border-radius: .2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.trip-dropdown:hover {
+    background-color: #14b19f41;
+    color: #14B19E;
+}
+
+.trip-dropdown.open {
+    background-color: #00796b3a;
+    color: #14B19E;
+}
+
+.trip-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    margin-left: 14px;
+}
+
+.trip-submenu.show {
+    max-height: 300px;
+    /* Adjust as needed */
+    opacity: 1;
 }

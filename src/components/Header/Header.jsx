@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ isCollapsed, setIsCollapsed }) => {
+  const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  const handleLogout = () => {
+    alert("hellp");
+    localStorage.removeItem("token");
+  };
   return (
     <header className="header fixed-top">
       <div className="container-fluids">
-        <p onClick={() => setIsCollapsed(!isCollapsed)} className="header-menubar">
-          <i class="bi bi-list"></i>
+        <p
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="header-menubar"
+        >
+          <i className="bi bi-list"></i>
         </p>
 
         {/* Notification & Profile Section */}
@@ -28,12 +36,10 @@ const Header = ({ isCollapsed, setIsCollapsed }) => {
             <i className="bi bi-person-circle"></i>
 
             {/* Dropdown Menu */}
-            {isDropdownOpen && (
-              <div className="dropdown-menu">
-                <p>Settings</p>
-                <p>Sign Out</p>
-              </div>
-            )}
+            <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
+              <p onClick={() => navigate("/profile")}>Settings</p>
+              <p onClick={handleLogout}>Sign Out</p>
+            </div>
           </div>
         </div>
       </div>

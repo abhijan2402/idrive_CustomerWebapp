@@ -1,0 +1,124 @@
+/* CSS File: TransactionList.css */
+
+.transaction-list {
+    padding: 20px;
+    background-color: #f8fdfa;
+    border-radius: 8px;
+}
+
+.transaction-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transaction-list-header p {
+    display: flex;
+    color: #3333338e;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+    gap: 8px;
+}
+
+.transaction-list-header span {
+    color: #009688;
+    font-weight: 700;
+}
+
+.transaction-list h2 {
+    font-size: 22px;
+    font-weight: 600
+}
+
+.transationlist-utility {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.search-button,
+.download-btn {
+    background-color: #009688;
+    border: 1px solid #009688;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
+}
+
+.transaction-table thead th {
+    background: #e0f2f1;
+    color: #009688;
+    font-weight: bold;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: #f0f5ff;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination select,
+.pagination button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.pagination span {
+    font-size: 12px;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

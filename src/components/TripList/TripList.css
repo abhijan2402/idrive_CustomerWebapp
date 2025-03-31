@@ -1,0 +1,130 @@
+.trip-list-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f8fcfb;
+    height: 100vh;
+}
+
+.trip-list-container h2 {
+    font-size: 20px;
+}
+
+.trip-list-container h3 {
+    font-size: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tabs button {
+    background: #e0f2f1;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3c3c3c;
+    border-radius: 5px;
+}
+
+.tabs button.active {
+    background: #009688;
+    color: white;
+}
+
+.filter-utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-btn {
+    background: #009688;
+    color: white;
+    padding: 8px 15px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.utilities {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.utilities button {
+    padding: 8px 22px;
+    border: none;
+    color: #009688;
+    border: 1px solid #009688;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: 0.4s all ease-in-out;
+}
+
+.utilities button:hover {
+    background: #009688;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background: #e0f2f1;
+    font-size: 12px;
+    color: #009688;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.no-data {
+    text-align: center;
+    padding: 50px;
+    color: #757575;
+}
+
+.no-data-message {
+    font-size: 14px;
+    color: #009688;
+}
+
+.settings-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #009688;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
