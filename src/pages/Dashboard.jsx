@@ -141,13 +141,11 @@ const Dashboard = () => {
         <LeaderBoard type={"Driver"} />
         <RecentTransactions />
       </div>
+      {/* ---------------- */}
       <div className="dashboard-transaction-container">
         <LeaderBoard type={"Customer"} />
         <RecentTransactions />
       </div>
-      {/* ------------------ */}
-
-      <TransactionList />
     </>
   );
 };

@@ -9,8 +9,8 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
     trip: false,
     tripParcel: false,
     userManagement: false,
-    driverLevels: false, 
-    driverSetup: false, 
+    driverLevels: false,
+    driverSetup: false,
   });
   const [dropdownactiveItem, setDropDownActiveItem] = useState("");
   // Example trip count data
@@ -324,10 +324,10 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               </li>
               <li
                 className={
-                  dropdownactiveItem === "DriverLevels" ? "active" : ""
+                  dropdownactiveItem === "AllDriverLevels" ? "active" : ""
                 }
                 onClick={() => {
-                  setDropDownActiveItem("DriverLevels"),
+                  setDropDownActiveItem("AllDriverLevels"),
                     setIsCollapsed(!isCollapsed),
                     navigate("/triplist?item=Pending");
                 }}
@@ -417,22 +417,24 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
           <h6 className="text-uppercase fw-bold">TRANSACTION & REPORT</h6>
           <ul>
             <li
-              className={dropdownactiveItem === "Transations" ? "active" : ""}
+              className={activeItem === "Transations" ? "active" : ""}
               onClick={() => {
-                setDropDownActiveItem("Transations"),
+                setActiveItem("Transations"),
                   setIsCollapsed(!isCollapsed),
                   navigate("/transactionlist");
               }}
             >
-              <i class="bi bi-wallet-fill"></i> Transations
+              <i className="bi bi-menu-down"></i> Transations
             </li>
             <li
-              className={dropdownactiveItem === "Report" ? "active" : ""}
+              className={activeItem === "Report" ? "active" : ""}
               onClick={() => {
-                setDropDownActiveItem("Report"), setIsCollapsed(!isCollapsed);
+                setActiveItem("Report"),
+                  setIsCollapsed(!isCollapsed),
+                  navigate("/heatmap");
               }}
             >
-              <i class="bi bi-card-checklist"></i>Report
+              <i className="bi bi-pin-map"></i> Report
             </li>
           </ul>
         </div>

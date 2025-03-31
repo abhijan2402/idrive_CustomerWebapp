@@ -16,7 +16,7 @@ const Layout = () => {
         <Header setIsCollapsed={setIsCollapsed} isCollapsed={isCollapsed} />
 
         {/* Render Routes Here */}
-        <main style={{ padding: "80px 20px", flex: 1, background: "#f4f4f4" }}>
+        <main className="layout-main-content">
           <Outlet />
         </main>
       </div>
