@@ -10,6 +10,8 @@ import TripList from "../components/TripList/TripList";
 import RefundRequestList from "../components/RefundRequestList/RefundRequestList";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import TransactionList from "../components/TransactionList/TransactionList";
+import DriverLevel from "../pages/DriverLevel";
+import DriverLevelAdd from "../pages/DriverLevelAdd";
 
 const AppRoutes = () => {
   return (
@@ -31,6 +33,10 @@ const AppRoutes = () => {
         <Route path="/parcelrefund" element={<RefundRequestList />} />
         <Route path="/profile" element={<UpdateProfile />} />
         <Route path="/transactionlist" element={<TransactionList />} />
+
+        {/* Driver Setup */}
+        <Route path="/driver/level" element={<DriverLevel />} />
+        <Route path="/driver/level/create" element={<DriverLevelAdd />} />
       </Route>
 
       {/* Redirect all unknown routes to login */}

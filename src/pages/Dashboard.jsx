@@ -3,10 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Dashboard.css";
 import LeaderBoard from "../components/LeaderBoard/LeaderBoard";
 import RecentTransactions from "../components/RecentTransactions/RecentTransactions";
-import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
-import TripList from "../components/TripList/TripList";
-import RefundRequestList from "../components/RefundRequestList/RefundRequestList";
-import TransactionList from "../components/TransactionList/TransactionList";
 
 const Dashboard = () => {
   const navigate = useNavigate();

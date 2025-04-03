@@ -11,6 +11,8 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
     userManagement: false,
     driverLevels: false,
     driverSetup: false,
+    withdraw: false,
+    employeeSetup: false,
   });
   const [dropdownactiveItem, setDropDownActiveItem] = useState("");
   // Example trip count data
@@ -284,6 +286,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
         <div className="dashboard-items">
           <h6 className="text-uppercase fw-bold">User Management</h6>
           <ul>
+            {/* Drvier Level Setup */}
             <li
               className={`trip-dropdown ${
                 dropdownStates.driverLevels ? "open" : ""
@@ -294,7 +297,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               }}
             >
               <div>
-                <i className="bi bi-car-front"></i> Driver Levels Setup
+                <i class="bi bi-people-fill"></i> Driver Levels Setup
               </div>
               <i
                 className={`bi ${
@@ -317,7 +320,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("DriverLevels"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=All Trips");
+                    navigate("/driver/level");
                 }}
               >
                 <span>-</span> Driver Levels
@@ -329,13 +332,14 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("AllDriverLevels"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=Pending");
+                    navigate("/driver/level/create");
                 }}
               >
                 <span>-</span> All Driver Levels
               </li>
             </ul>
 
+            {/* Drvier Setup */}
             <li
               className={`trip-dropdown ${
                 dropdownStates.driverSetup ? "open" : ""
@@ -345,7 +349,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               }}
             >
               <div>
-                <i className="bi bi-car-front"></i> Driver Setup
+                <i class="bi bi-people-fill"></i> Driver Setup
               </div>
               <i
                 className={`bi ${
@@ -397,6 +401,116 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               </li>
             </ul>
 
+            {/* Withdraw */}
+            <li
+              className={`trip-dropdown ${
+                dropdownStates.withdraw ? "open" : ""
+              } ${activeItem === "Withdraw" ? "active" : ""}`}
+              onClick={() => {
+                toggleDropdown("withdraw"), setActiveItem("Withdraw");
+              }}
+            >
+              <div>
+                <i class="bi bi-cash-stack"></i> Withdraw
+              </div>
+              <i
+                className={`bi ${
+                  dropdownStates.withdraw ? "bi-chevron-up" : "bi-chevron-down"
+                }`}
+              />
+            </li>
+
+            <ul
+              className={`trip-submenu ${
+                dropdownStates.withdraw ? "show" : ""
+              }`}
+            >
+              <li
+                className={dropdownactiveItem === "MehtodList" ? "active" : ""}
+                onClick={() => {
+                  setDropDownActiveItem("MehtodList"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=All Trips");
+                }}
+              >
+                <span>-</span> Mehtod List
+              </li>
+              <li
+                className={dropdownactiveItem === "AddMethod" ? "active" : ""}
+                onClick={() => {
+                  setDropDownActiveItem("AddMethod"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=Pending");
+                }}
+              >
+                <span>-</span> Add Method
+              </li>
+              <li
+                className={
+                  dropdownactiveItem === "WithdrawRequest " ? "active" : ""
+                }
+                onClick={() => {
+                  setDropDownActiveItem("WithdrawRequest "),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=Pending");
+                }}
+              >
+                <span>-</span> Withdraw Request
+              </li>
+            </ul>
+            {/* Customer Setup */}
+            <li
+              className={`trip-dropdown ${
+                dropdownStates.customerSetup ? "open" : ""
+              } ${activeItem === "CustomerSetup" ? "active" : ""}`}
+              onClick={() => {
+                toggleDropdown("customerSetup"), setActiveItem("CustomerSetup");
+              }}
+            >
+              <div>
+                <i class="bi bi-person-add"></i> Customer Setup
+              </div>
+              <i
+                className={`bi ${
+                  dropdownStates.customerSetup
+                    ? "bi-chevron-up"
+                    : "bi-chevron-down"
+                }`}
+              />
+            </li>
+
+            <ul
+              className={`trip-submenu ${
+                dropdownStates.customerSetup ? "show" : ""
+              }`}
+            >
+              <li
+                className={
+                  dropdownactiveItem === "CustomerList" ? "active" : ""
+                }
+                onClick={() => {
+                  setDropDownActiveItem("CustomerList"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=All Trips");
+                }}
+              >
+                <span>-</span> Customer List
+              </li>
+              <li
+                className={
+                  dropdownactiveItem === "AddNewCustomer" ? "active" : ""
+                }
+                onClick={() => {
+                  setDropDownActiveItem("AddNewCustomer"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=Pending");
+                }}
+              >
+                <span>-</span> Add New Customer
+              </li>
+            </ul>
+
+            {/* Customer Wallet */}
             <li
               className={
                 dropdownactiveItem === "Customer Wallett" ? "active" : ""
@@ -409,6 +523,70 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
             >
               <i class="bi bi-wallet-fill"></i> Customer Wallet
             </li>
+
+            {/* Employee Setup */}
+            <li
+              className={`trip-dropdown ${
+                dropdownStates.employeeSetup ? "open" : ""
+              } ${activeItem === "EmployeeSetup" ? "active" : ""}`}
+              onClick={() => {
+                toggleDropdown("employeeSetup"), setActiveItem("EmployeeSetup");
+              }}
+            >
+              <div>
+                <i class="bi bi-person-bounding-box"></i> Employee Setup
+              </div>
+              <i
+                className={`bi ${
+                  dropdownStates.employeeSetup
+                    ? "bi-chevron-up"
+                    : "bi-chevron-down"
+                }`}
+              />
+            </li>
+
+            <ul
+              className={`trip-submenu ${
+                dropdownStates.employeeSetup ? "show" : ""
+              }`}
+            >
+              <li
+                className={
+                  dropdownactiveItem === "AttributesList" ? "active" : ""
+                }
+                onClick={() => {
+                  setDropDownActiveItem("AttributesList"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=All Trips");
+                }}
+              >
+                <span>-</span> Attributes List
+              </li>
+              <li
+                className={
+                  dropdownactiveItem === "EmployeeList" ? "active" : ""
+                }
+                onClick={() => {
+                  setDropDownActiveItem("EmployeeList"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=All Trips");
+                }}
+              >
+                <span>-</span> Employee List
+              </li>
+              <li
+                className={
+                  dropdownactiveItem === "AddNewEmployee" ? "active" : ""
+                }
+                onClick={() => {
+                  setDropDownActiveItem("AddNewEmployee"),
+                    setIsCollapsed(!isCollapsed),
+                    navigate("/triplist?item=Pending");
+                }}
+              >
+                <span>-</span> Add New Employee
+              </li>
+            </ul>
           </ul>
         </div>
 

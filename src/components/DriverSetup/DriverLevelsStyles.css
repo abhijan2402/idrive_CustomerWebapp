@@ -1,0 +1,78 @@
+/* Driver Levels Styles */
+#add_levels{
+    background-color: #00796b;
+    color: white;
+}
+.level-list-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+}
+
+thead {
+    color: #1AB19E;
+    background-color: #E7F7F5;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+    color: #00796b;
+}
+
+.level-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.edit-btn {
+    color: #00796b;
+}
+
+.delete-btn {
+    color: #d32f2f;
+}
+
+.edit-btn:hover {
+    color: #004d40;
+}
+
+.delete-btn:hover {
+    color: #b71c1c;
+}
