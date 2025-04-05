@@ -15,7 +15,6 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
     employeeSetup: false,
   });
   const [dropdownactiveItem, setDropDownActiveItem] = useState("");
-  // Example trip count data
   const tripCounts = {
     all: 120,
     pending: 30,

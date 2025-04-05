@@ -12,11 +12,13 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import TransactionList from "../components/TransactionList/TransactionList";
 import DriverLevel from "../pages/DriverLevel";
 import DriverLevelAdd from "../pages/DriverLevelAdd";
+import CompanyRegistrationForm from "../components/Signup/CompanyRegistrationForm";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/login" element={<LoginForm />} />
+      <Route path="/registration" element={<CompanyRegistrationForm />} />
 
       {/* Protected Routes with Layout */}
       <Route
