@@ -118,6 +118,18 @@ const LoginForm = () => {
               </form>
             </div>
           </div>
+          <div className="login-footer d-flex align-items-center justify-content-center px-xxl-5 py-xl-3">
+            <small className="opacity-75">
+              Don’t have an account?{" "}
+              <a
+                onClick={() => navigate("/registration")}
+                className=" ms-1 signup-redirect"
+              >
+                Create one
+              </a>
+            </small>
+          </div>
+
           <div className="login-footer mt-auto d-flex align-items-center justify-content-between mt-3 px-xxl-5 py-xl-3">
             <button
               type="button"

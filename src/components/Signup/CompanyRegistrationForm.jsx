@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "../LoginForm.css";
 import "./CompanyRegistrationForm.css";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CompanyRegistrationForm = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
@@ -245,9 +247,15 @@ const CompanyRegistrationForm = () => {
               </form>
             </div>
           </div>
-          <div className="login-footer mt-auto d-flex align-items-center justify-content-center mt-1 px-xxl-5 py-xl-3">
+          <div className="login-footer d-flex align-items-center justify-content-center px-xxl-5 py-xl-3">
             <small className="opacity-75">
-              All details are kept confidential & secure.
+              Already have an account?{" "}
+              <a
+                onClick={() => navigate("/login")}
+                className=" ms-1 signup-redirect"
+              >
+                Sign In
+              </a>
             </small>
           </div>
         </div>

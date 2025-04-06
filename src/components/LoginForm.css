@@ -1,3 +1,9 @@
+.signup-redirect{
+    color: #006156;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
 .login-form {
     min-block-size: 100vh;
     display: flex;
