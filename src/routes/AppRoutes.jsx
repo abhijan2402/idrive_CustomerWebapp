@@ -13,6 +13,9 @@ import TransactionList from "../components/TransactionList/TransactionList";
 import DriverLevel from "../pages/DriverLevel";
 import DriverLevelAdd from "../pages/DriverLevelAdd";
 import CompanyRegistrationForm from "../components/Signup/CompanyRegistrationForm";
+import DriverSetup from "../pages/DriverSetup";
+import AddDriverForm from "../components/DriverSetup/AddDriverForm";
+import DriverIdentity from "../components/DriverSetup/DriverIdentity";
 
 const AppRoutes = () => {
   return (
@@ -39,6 +42,9 @@ const AppRoutes = () => {
         {/* Driver Setup */}
         <Route path="/driver/level" element={<DriverLevel />} />
         <Route path="/driver/level/create" element={<DriverLevelAdd />} />
+        <Route path="/driver/level/drvierlist" element={<DriverSetup />} />
+        <Route path="/driver/level/adddriver" element={<AddDriverForm />} />
+        <Route path="/driver/level/driverIdentity" element={<DriverIdentity />} />
       </Route>
 
       {/* Redirect all unknown routes to login */}

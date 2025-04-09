@@ -1,0 +1,118 @@
+.add-driver-container {
+    padding: 30px;
+    background: #f0fdfa;
+    font-family: "Segoe UI", sans-serif;
+}
+
+h2 {
+    color: #1e293b;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    border: .5px solid #0596685a;
+}
+
+.add-driver-container-details {
+    display: flex;
+}
+
+.section-title {
+    color: #059669;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.form-group label span {
+    color: red;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    font-size: 14px;
+}
+
+.form-group input:disabled {
+    background-color: #f1f5f9;
+}
+
+.upload-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload-group label {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.upload-box {
+    width: 40%;
+    border: 2px dashed #cbd5e1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.upload-text {
+    color: #0284c7;
+    font-size: 14px;
+}
+
+.upload-note {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.upload-group-2 {
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.upload-group-2 label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1e293b;
+}

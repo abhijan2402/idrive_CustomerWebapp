@@ -369,7 +369,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("DriverList"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=All Trips");
+                    navigate("/driver/level/drvierlist");
                 }}
               >
                 <span>-</span> Driver List
@@ -381,7 +381,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("AddNewDrivers"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=Pending");
+                    navigate("/driver/level/adddriver");
                 }}
               >
                 <span>-</span> Add New Driver
@@ -393,7 +393,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("AddIdentitiyRequest"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=Pending");
+                    navigate("/driver/level/driverIdentity");
                 }}
               >
                 <span>-</span> Driver Identity Request List
