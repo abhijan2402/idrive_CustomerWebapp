@@ -43,7 +43,7 @@ const CustomerLevelDash = () => {
       </div>
       <div className="levels-wrapper">
         {levels.map((level) => (
-          <div key={level.id} className="level-card">
+          <div key={level.id} className="customerlevel-card">
             <div className="level-info">
               <div>
                 <h3 className="level-name">{level.name}</h3>

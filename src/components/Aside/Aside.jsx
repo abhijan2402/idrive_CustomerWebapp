@@ -425,14 +425,14 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               }`}
             >
               <li
-                className={dropdownactiveItem === "MehtodList" ? "active" : ""}
+                className={dropdownactiveItem === "MethodList" ? "active" : ""}
                 onClick={() => {
-                  setDropDownActiveItem("MehtodList"),
+                  setDropDownActiveItem("MethodList"),
                     setIsCollapsed(!isCollapsed),
                     navigate("/drive/level/withdrawmethod-list");
                 }}
               >
-                <span>-</span> Mehtod List
+                <span>-</span> Method List
               </li>
               <li
                 className={dropdownactiveItem === "AddMethod" ? "active" : ""}
