@@ -1,0 +1,123 @@
+.withdraw-container {
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3fdfd;
+    border-radius: 10px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: #e0f5f2;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background: #13c1a8;
+    color: white;
+}
+
+.controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-group {
+    display: flex;
+    gap: 8px;
+}
+
+.search-group input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    background: #13c1a8;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.filters select {
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.total-count {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin-left: auto;
+    color: #068f7a;
+    padding: 10px 0;
+}
+
+.withdraw-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.withdraw-table th,
+.withdraw-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2f2f2;
+}
+
+.withdraw-table th {
+    background: #e7f7f7;
+    font-weight: 600;
+}
+
+.status.pending {
+    background: #daf3ff;
+    color: #00aaff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.actions button {
+    margin-right: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.actions .view {
+    color: #00aaff;
+}
+
+.actions .approve {
+    color: green;
+}
+
+.actions .deny {
+    color: red;
+}
+
+.actions .download {
+    color: orange;
+}

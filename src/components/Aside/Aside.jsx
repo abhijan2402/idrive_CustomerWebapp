@@ -429,7 +429,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("MehtodList"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=All Trips");
+                    navigate("/drive/level/withdrawmethod-list");
                 }}
               >
                 <span>-</span> Mehtod List
@@ -439,7 +439,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("AddMethod"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=Pending");
+                    navigate("/drive/level/addwithdraw-method");
                 }}
               >
                 <span>-</span> Add Method
@@ -451,7 +451,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("WithdrawRequest "),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=Pending");
+                    navigate("/drive/level/addwithdraw-request");
                 }}
               >
                 <span>-</span> Withdraw Request
@@ -490,7 +490,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("CustomerList"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=All Trips");
+                    navigate("/drive/level/customer-level-setup");
                 }}
               >
                 <span>-</span> Customer List
@@ -502,7 +502,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                 onClick={() => {
                   setDropDownActiveItem("AddNewCustomer"),
                     setIsCollapsed(!isCollapsed),
-                    navigate("/triplist?item=Pending");
+                    navigate("/drive/level/customer-add-new-customer");
                 }}
               >
                 <span>-</span> Add New Customer
