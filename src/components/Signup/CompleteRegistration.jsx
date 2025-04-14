@@ -63,6 +63,16 @@ const CompleteRegistration = () => {
     toast.success("Company registered successfully!");
   };
 
+  const handleDigiLockerAuth = () => {
+    const clientId = "YOUR_DIGILOCKER_CLIENT_ID";
+    const redirectUri = "YOUR_REDIRECT_URI";
+
+    const digilockerUrl = `https://digilocker.meripehchaan.gov.in/public/oauth2/1/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&state=1234`;
+
+    window.open(digilockerUrl, "_blank", "width=500,height=600");
+  };
+
+
   return (
     <div className="login-form d-block">
       <div className="login-wrap">
@@ -143,6 +153,15 @@ const CompleteRegistration = () => {
                           onChange={handleChange}
                           required
                         />
+                        <label>OR</label>
+
+                        <button
+                          type="button"
+                          className="digilocker-btn"
+                          onClick={handleDigiLockerAuth}
+                        >
+                          Verify via DigiLocker
+                        </button>
                       </div>
                       <div className="form-group">
                         <label>Aadhar Card</label>
@@ -154,6 +173,15 @@ const CompleteRegistration = () => {
                           onChange={handleChange}
                           required
                         />
+                        <label>OR</label>
+
+                        <button
+                          type="button"
+                          className="digilocker-btn"
+                          onClick={handleDigiLockerAuth}
+                        >
+                          Verify via DigiLocker
+                        </button>
                       </div>
                     </div>
 
@@ -426,6 +454,7 @@ const CompleteRegistration = () => {
                               onChange={handleFileChange}
                               required
                             />
+                            
                           </div>
 
                           <div className="form-group">

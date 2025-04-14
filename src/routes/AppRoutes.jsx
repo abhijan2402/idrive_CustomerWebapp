@@ -41,13 +41,11 @@ const AppRoutes = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/heatmap" element={<TripHeatMap />} />
         <Route path="/registration" element={<CompleteRegistration />} />
-
         <Route path="/fleetview" element={<UserLiveView />} />
         <Route path="/triplist" element={<Trip />} />
         <Route path="/parcelrefund" element={<RefundRequestList />} />
         <Route path="/profile" element={<UpdateProfile />} />
         <Route path="/transactionlist" element={<TransactionList />} />
-
         {/* Driver Setup */}
         <Route path="/driver/level" element={<DriverLevel />} />
         <Route path="/driver/level/create" element={<DriverLevelAdd />} />
