@@ -4,6 +4,53 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Colors */
+  --primary-color: #FFFFFF;
+  --secondary-color: #14B19E;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --button-color: #14b19fe2;
+  --button-hover-color: #14B19E;
+  --button-text-color: #fff;
+
+  /* Neutral */
+  --text-color: #212529;
+  --background-color: #ffffff;
+  --border-color: 2B2E7F;
+
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+
+
 .layout-main-content {
   padding-top: 80px;
   padding-left: 40px;

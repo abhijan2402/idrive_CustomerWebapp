@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "../LoginForm.css";
-import "./CompanyRegistrationForm.css";
+import "./Signup.css";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
-const CompanyRegistrationForm = () => {
+const Signup = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    name: "",
+    FullName: "",
     ownerName: "",
     companyName: "",
     tin: "",
@@ -30,7 +31,7 @@ const CompanyRegistrationForm = () => {
 
   const handleNext = () => {
     if (
-      !formData.name ||
+      !formData.FullName ||
       !formData.ownerName ||
       !formData.companyName ||
       !formData.tin ||
@@ -56,118 +57,85 @@ const CompanyRegistrationForm = () => {
   return (
     <div className="login-form d-block">
       <div className="login-wrap">
-        <div
-          className="login-left py-4 d-flex justify-content-center align-items-center bg-center bg-img"
-          style={{
-            backgroundImage:
-              'url("https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/login-bg.png")',
-          }}
-        >
-          <div className="tf-box d-flex flex-column gap-3 align-items-center justify-content-center p-4 py-sm-5 p-md-5 mx-md-5 mx-4">
-            <img
-              className="login-logo mb-2"
-              src="https://drivemond-admin.codemond.com/storage/app/public/business/2023-11-20-655adbb133299.png"
-              alt="Logo"
-            />
-            <h2 className="text-center absolute-white">
-              Register your <strong>Company</strong>
-              <br /> with <strong>Ease</strong>
-            </h2>
-          </div>
-        </div>
-        <div className="login-right-wrap">
-          <div className="d-flex justify-content-end mt-2 me-2">
-            <span className="badge badge-success fz-12 opacity-75 version">
-              Form Version : 1.0
-            </span>
-          </div>
-          <div className="login-right w-100 m-auto px-0 pb-3">
-            <div className="inner-div px-0">
+        <div className="login-right-wrap-company">
+          <div className="compoany-login-right">
+            <div className="inner-div-company px-0">
               <div className="text-center mb-30">
-                {/* <h2 className="text-uppercase mb-3">DriveMond</h2> */}
-                <h3 className="mb-2">Registration Form</h3>
-                <p className="opacity-75 mb-4">Register to stay connected</p>
+                <img className="login-logo mt-2" src={logo} alt="Logo" />
+                <h3 className="mb-2">Sign Up</h3>
+                <p className="opacity-75 mb-4">Sign Up to stay connected</p>
               </div>
               <form onSubmit={handleSubmit}>
                 {step === 1 && (
                   <div className="form-step company-registration">
+                    <label htmlFor="FullName" className="form-label">
+                      Full Name
+                    </label>
                     <input
                       type="text"
-                      name="name"
-                      placeholder="Name"
-                      value={formData.name}
+                      name="FullName"
+                      placeholder="Full Name"
+                      value={formData.FullName}
                       onChange={handleChange}
                       className="form-control mb-3"
                       required
                     />
+                    <label htmlFor="phone" className="form-label">
+                      Phone
+                    </label>
+                    <input
+                      type="number"
+                      name="phone"
+                      placeholder="Mobile Number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <label htmlFor="password" className="form-label">
+                      Password
+                    </label>
                     <input
                       type="text"
-                      name="ownerName"
-                      placeholder="Company Owner Name"
-                      value={formData.ownerName}
+                      name="password"
+                      placeholder="Enter your password"
+                      value={formData.password}
                       onChange={handleChange}
                       className="form-control mb-3"
                       required
                     />
-                    <input
-                      type="text"
-                      name="companyName"
-                      placeholder="Company Name"
-                      value={formData.companyName}
+                    <label htmlFor="role" className="form-label">
+                      Role <small className="text-muted">(optional)</small>
+                    </label>
+                    <select
+                      name="role"
+                      id="role"
+                      className="form-select mb-3"
+                      value={formData.role}
                       onChange={handleChange}
-                      className="form-control mb-3"
-                      required
-                    />
-                    <input
-                      type="text"
-                      name="tin"
-                      placeholder="TIN"
-                      value={formData.tin}
-                      onChange={handleChange}
-                      className="form-control mb-3"
-                      required
-                    />
-                    <input
-                      type="text"
-                      name="panCard"
-                      placeholder="PAN Card Number"
-                      value={formData.panCard}
-                      onChange={handleChange}
-                      className="form-control mb-3"
-                      required
-                    />
-                    <input
-                      type="text"
-                      name="aadharCard"
-                      placeholder="Aadhar Card Number"
-                      value={formData.aadharCard}
-                      onChange={handleChange}
-                      className="form-control mb-3"
-                      required
-                    />
-                    <input
-                      type="text"
-                      name="services"
-                      placeholder="Services Offered"
-                      value={formData.services}
-                      onChange={handleChange}
-                      className="form-control mb-3"
-                      required
-                    />
-                    <textarea
-                      name="address"
-                      placeholder="Address"
-                      value={formData.address}
-                      onChange={handleChange}
-                      className="form-control mb-3"
-                      required
-                    />
-                    <button
-                      type="button"
-                      className="btn btn-primary w-100 mt-3 step-1-btn"
-                      onClick={handleNext}
                     >
-                      Next
+                      <option value="">Select your role</option>
+                      <option value="Customer">Customer</option>
+                      <option value="Provider">Provider</option>
+                    </select>
+
+                    <button
+                      type="submit"
+                      className="btn btn-primary w-100 ms-2 step-1-btn"
+                    >
+                      Submit
                     </button>
                   </div>
                 )}
@@ -246,17 +214,17 @@ const CompanyRegistrationForm = () => {
                 )}
               </form>
             </div>
-          </div>
-          <div className="login-footer d-flex align-items-center justify-content-center px-xxl-5 py-xl-3">
-            <small className="opacity-75">
-              Already have an account?{" "}
-              <a
-                onClick={() => navigate("/login")}
-                className=" ms-1 signup-redirect"
-              >
-                Sign In
-              </a>
-            </small>
+            <div className="login-footer d-flex align-items-center justify-content-center px-xxl-5 py-xl-3">
+              <small className="opacity-75">
+                Already have an account?{" "}
+                <a
+                  onClick={() => navigate("/login")}
+                  className=" ms-1 signup-redirect"
+                >
+                  Sign In
+                </a>
+              </small>
+            </div>
           </div>
         </div>
       </div>
@@ -264,4 +232,60 @@ const CompanyRegistrationForm = () => {
   );
 };
 
-export default CompanyRegistrationForm;
+export default Signup;
+
+{
+  /* <input
+                      type="text"
+                      name="companyName"
+                      placeholder="Company Name"
+                      value={formData.companyName}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="tin"
+                      placeholder="TIN"
+                      value={formData.tin}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="panCard"
+                      placeholder="PAN Card Number"
+                      value={formData.panCard}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="aadharCard"
+                      placeholder="Aadhar Card Number"
+                      value={formData.aadharCard}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="services"
+                      placeholder="Services Offered"
+                      value={formData.services}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    />
+                    <textarea
+                      name="address"
+                      placeholder="Address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      className="form-control mb-3"
+                      required
+                    /> */
+}

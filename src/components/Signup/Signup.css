@@ -1,0 +1,42 @@
+.company-registration{
+    padding: 0 1rem;
+}
+.company-registration input {
+    font-size: 12px;
+
+}
+.login-right-wrap-company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.company-registration textarea {
+    font-size: 12px;
+}
+
+.company-registration select {
+    font-size: 12px;
+}
+
+.company-registration select option {
+    font-size: 12px;
+}
+.login-footer small{font-size: var(--font-md);
+     
+}
+
+
+
+.step-1-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.compoany-login-right{
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: .4rem;
+}

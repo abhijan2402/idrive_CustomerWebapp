@@ -9,6 +9,7 @@ import {
   FaCog,
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import DriverLevels from "../DriverSetup/DriverLevelDash";
 
 const TripList = () => {
   const location = useLocation();
@@ -43,15 +44,19 @@ const TripList = () => {
         ))}
       </div>
 
+      <DriverLevels />
+
       <h3>All Trips</h3>
       <div className="filter-utilities">
         <div className="search-bar">
           <div>
             <input type="text" placeholder="Search here by Trip ID" />
           </div>
-          <button className="search-btn">
-            <FaSearch /> Search
-          </button>
+          <div>
+            <button className="search-btn">
+              <FaSearch /> Search
+            </button>
+          </div>
         </div>
 
         <div className="utilities">
@@ -69,40 +74,41 @@ const TripList = () => {
           </button>
         </div>
       </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>SL</th>
-            <th>Trip ID</th>
-            <th>Date</th>
-            <th>Customer</th>
-            <th>Driver</th>
-            <th>Trip Type</th>
-            <th>Trip Cost ($)</th>
-            <th>Coupon Discount ($)</th>
-            <th>Additional Fee ($)</th>
-            <th>Total Trip Cost ($)</th>
-            <th>Admin Commission ($)</th>
-            <th>Trip Payment Status</th>
-            <th>Trip Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colSpan="14" className="no-data">
-              <div className="no-data-message">
-                <div className="icon-table">⚠️</div>
-                No data available
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="settings-icon">
-        <FaCog />
+      <div className="trip-border">
+        <table>
+          <thead>
+            <tr>
+              <th>SL</th>
+              <th>Trip ID</th>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Driver</th>
+              <th>Trip Type</th>
+              <th>Trip Cost ($)</th>
+              <th>Coupon Discount ($)</th>
+              <th>Additional Fee ($)</th>
+              <th>Total Trip Cost ($)</th>
+              <th>Admin Commission ($)</th>
+              <th>Trip Payment Status</th>
+              <th>Trip Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colSpan="14" className="no-data">
+                <div className="no-data-message">
+                  <div className="icon-table">⚠️</div>
+                  No data available
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      {/* <div className="settings-icon">
+        <FaCog />
+      </div> */}
     </div>
   );
 };

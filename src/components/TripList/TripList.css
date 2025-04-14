@@ -46,14 +46,16 @@
     gap: 10px;
     margin-bottom: 20px;
     font-size: 12px;
+    align-items: center;
 }
 
 .search-bar input {
     flex-grow: 1;
-    padding: 8px 10px;
+    padding: 6px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    font-size: 12px;
 }
 
 .search-btn {

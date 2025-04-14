@@ -4,33 +4,46 @@ import "./DriverLevels.css";
 const levels = [
   {
     id: 1,
-    name: "Level 1",
+    name: "Pending",
     drivers: 6,
-    icon: "https://drivemond-admin.codemond.com/storage/app/public/driver/level/2023-11-20-655b1b668a6b8.png",
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car1.png",
   },
   {
     id: 2,
-    name: "Level 2",
+    name: "Accepted",
     drivers: 0,
-    icon: "https://drivemond-admin.codemond.com/storage/app/public/driver/level/2023-11-20-655b1b523d4d5.png",
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car2.png",
   },
   {
     id: 3,
-    name: "Level 3",
+    name: "Completed",
     drivers: 0,
-    icon: "https://drivemond-admin.codemond.com/storage/app/public/driver/level/2023-11-20-655b1b892cc35.png",
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car4.png",
   },
   {
     id: 4,
-    name: "Level 4",
+    name: "Ongoing",
     drivers: 0,
-    icon: "https://drivemond-admin.codemond.com/storage/app/public/driver/level/2023-11-20-655b1b786858f.png",
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car3.png",
   },
   {
     id: 5,
-    name: "Level Expert",
+    name: "Cancelled",
     drivers: 0,
-    icon: "https://drivemond-admin.codemond.com/storage/app/public/driver/level/2023-11-20-655b1c02893ba.png",
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car5.png",
+  },
+
+  {
+    id: 6,
+    name: "Returning",
+    drivers: 0,
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car3.png",
+  },
+  {
+    id: 7,
+    name: "Returned",
+    drivers: 0,
+    icon: "https://drivemond-admin.codemond.com/public/assets/admin-module/img/media/car4.png",
   },
 ];
 
@@ -38,7 +51,7 @@ const DriverLevels = () => {
   return (
     <div className="driver-levels-container">
       <div className="diver-levels-header">
-        <h2 className="title">Driver Levels</h2>
+        <h2 className="title">Trip Statistics</h2>
         <div>
           <select>
             <option>All time</option>
@@ -53,7 +66,7 @@ const DriverLevels = () => {
             <div className="level-info">
               <div>
                 <h3 className="level-name">{level.name}</h3>
-                <p className="label">Drivers</p>
+                <p className="label">Trip</p>
               </div>
               <img src={level.icon} alt={level.name} className="level-icon" />
             </div>

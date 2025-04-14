@@ -12,7 +12,7 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import TransactionList from "../components/TransactionList/TransactionList";
 import DriverLevel from "../pages/DriverLevel";
 import DriverLevelAdd from "../pages/DriverLevelAdd";
-import CompanyRegistrationForm from "../components/Signup/CompanyRegistrationForm";
+import Signup from "../components/Signup/Signup";
 import DriverSetup from "../pages/DriverSetup";
 import AddDriverForm from "../components/DriverSetup/AddDriverForm";
 import DriverIdentity from "../components/DriverSetup/DriverIdentity";
@@ -21,12 +21,15 @@ import AddWithdrawMethod from "../components/Withdraw/AddWithdrawMethod";
 import WithdrawRequests from "../components/Withdraw/WithdrawRequests";
 import CustomerLevelSetup from "../pages/CustomerLevelSetup";
 import AddCustomer from "../components/CustomerLevelSetup/AddCustomer";
+import CompleteRegistration from "../components/Signup/CompleteRegistration";
+import Trip from "../pages/Trip";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/login" element={<LoginForm />} />
-      <Route path="/registration" element={<CompanyRegistrationForm />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/registration" element={<CompleteRegistration />} />
 
       {/* Protected Routes with Layout */}
       <Route
@@ -39,7 +42,7 @@ const AppRoutes = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/heatmap" element={<TripHeatMap />} />
         <Route path="/fleetview" element={<UserLiveView />} />
-        <Route path="/triplist" element={<TripList />} />
+        <Route path="/triplist" element={<Trip />} />
         <Route path="/parcelrefund" element={<RefundRequestList />} />
         <Route path="/profile" element={<UpdateProfile />} />
         <Route path="/transactionlist" element={<TransactionList />} />

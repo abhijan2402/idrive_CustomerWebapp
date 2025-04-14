@@ -1,14 +1,21 @@
-.signup-redirect{
-    color: #006156;
+.signup-redirect {
+    color: var(--secondary-color);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+    font-size: var(--font-md);
 }
+
+
 .login-form {
     min-block-size: 100vh;
     display: flex;
     align-items: center;
     font-size: 0.75rem;
+}
+
+.login-footer-account small {
+    font-size: var(--font-md);
 }
 
 .login-form {
@@ -21,8 +28,10 @@
 .register-wrap,
 .login-wrap {
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 650px);
+    grid-template-columns: 1fr minmax(auto 650px);
     min-height: 100dvh;
+    width: 100%;
+
 }
 
 .bg-img {
@@ -40,9 +49,9 @@
 }
 
 .btn {
-    background-color: #14b19fd4;
+    background-color: var(--button-color);
     outline: none;
-    border: #006156;
+    border: var(--border-color);
     display: flex;
     align-items: center;
     transition: 0.5s all ease-in-out;
@@ -50,10 +59,18 @@
     padding: .6rem 0;
 }
 
+.rm {
+    display: flex;
+}
+
+.lh-1 {
+    margin-left: 4px;
+}
+
 .btn:hover {
-    background-color: #14b19e;
+    background-color: var(--button-hover-color);
     outline: none;
-    border: #006156;
+    border: var(--border-color);
     display: flex;
     align-items: center;
 }
@@ -62,6 +79,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* background-image: url("https://www.formulacarrental.com/images/fleet.webp"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.login-right-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.663); */
+    z-index: 0;
+}
+
+.login-right-wrap>* {
+    position: relative;
+    z-index: 1;
 }
 
 .badge {
@@ -73,14 +110,14 @@
 }
 
 .badge-success {
-    color: #30b877;
+    color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 1199px) {
 
     .register-wrap,
     .login-wrap {
-        grid-template-columns: 1fr minmax(450px, 450px);
+        /* grid-template-columns: 1fr minmax(450px, 450px); */
     }
 }
 
@@ -88,14 +125,20 @@
 
     .register-wrap,
     .login-wrap {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
     }
 }
 
 .register-right,
 .login-right {
-    padding: 2.5rem;
+    padding: 3.5rem 3.5rem;
     position: relative;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.inner-div {
+    padding: 1rem 1.5rem;
 }
 
 @media only screen and (max-width: 575px) {
@@ -129,10 +172,17 @@
     margin-block-start: auto;
 }
 
+.login-footer-account {
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
+    -webkit-margin-before: auto;
+    margin-block-start: auto;
+}
+
 .register-copy,
 .login-copy {
     border-radius: 0.1875rem;
-    color: var(--absolute-white);
     padding: 0.5rem 0.625rem;
 }
 

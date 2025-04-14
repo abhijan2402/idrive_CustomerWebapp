@@ -76,16 +76,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
             >
               <i className="bi bi-menu-down"></i> Dashboard
             </li>
-            <li
-              className={activeItem === "Heatmap" ? "active" : ""}
-              onClick={() => {
-                setActiveItem("Heatmap"),
-                  setIsCollapsed(!isCollapsed),
-                  navigate("/heatmap");
-              }}
-            >
-              <i className="bi bi-pin-map"></i> Heat Map
-            </li>
+
             <li
               className={activeItem === "fleetview" ? "active" : ""}
               onClick={() => {
@@ -286,7 +277,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
           <h6 className="text-uppercase fw-bold">User Management</h6>
           <ul>
             {/* Drvier Level Setup */}
-            <li
+            {/* <li
               className={`trip-dropdown ${
                 dropdownStates.driverLevels ? "open" : ""
               } ${activeItem === " DriverLevelsSetup" ? "active" : ""}`}
@@ -305,9 +296,9 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                     : "bi-chevron-down"
                 }`}
               />
-            </li>
+            </li> */}
 
-            <ul
+            {/* <ul
               className={`trip-submenu ${
                 dropdownStates.driverLevels ? "show" : ""
               }`}
@@ -336,10 +327,10 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               >
                 <span>-</span> All Driver Levels
               </li>
-            </ul>
+            </ul> */}
 
             {/* Drvier Setup */}
-            <li
+            {/* <li
               className={`trip-dropdown ${
                 dropdownStates.driverSetup ? "open" : ""
               } ${activeItem === " DriverSetup" ? "active" : ""}`}
@@ -357,9 +348,9 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
                     : "bi-chevron-down"
                 }`}
               />
-            </li>
+            </li> */}
 
-            <ul
+            {/* <ul
               className={`trip-submenu ${
                 dropdownStates.driverSetup ? "show" : ""
               }`}
@@ -398,7 +389,7 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
               >
                 <span>-</span> Driver Identity Request List
               </li>
-            </ul>
+            </ul> */}
 
             {/* Withdraw */}
             <li

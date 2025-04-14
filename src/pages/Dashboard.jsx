@@ -4,6 +4,18 @@ import "../styles/Dashboard.css";
 import LeaderBoard from "../components/LeaderBoard/LeaderBoard";
 import RecentTransactions from "../components/RecentTransactions/RecentTransactions";
 
+const StatCard = ({ icon, color, value, label }) => (
+  <div className="stat-card">
+    <div className={`icon ${color}`}>
+      <i className={`bi ${icon}`}></i>
+    </div>
+    <div className="stat-info">
+      <h2>{value}</h2>
+      <p>{label}</p>
+    </div>
+  </div>
+);
+
 const Dashboard = () => {
   const navigate = useNavigate();
 
@@ -36,103 +48,107 @@ const Dashboard = () => {
       </div>
       <div className="dashboard-container">
         <div className="stats-grid">
-          <div className="stat-card">
-            <div className="icon blue">
-              <i class="bi bi-people-fill"></i>
-            </div>
-            <div className="stat-info">
-              <h2>3</h2>
-              <p>Total Active Customers</p>
-            </div>
-          </div>
+          {/* Total Users */}
+          <StatCard
+            icon="bi-people-fill"
+            color="blue"
+            value="320"
+            label="Total Users"
+          />
 
-          <div className="stat-card">
-            <div className="icon green">
-              <i class="bi bi-person-check-fill"></i>
-            </div>
-            <div className="stat-info">
-              <h2>6</h2>
-              <p>Total Active Drivers</p>
-            </div>
-          </div>
+          {/* Total Drivers */}
+          <StatCard
+            icon="bi-person-check-fill"
+            color="green"
+            value="58"
+            label="Total Active Drivers"
+          />
 
-          <div className="stat-card">
-            <div className="icon orange">
-              <i class="bi bi-currency-exchange"></i>
-            </div>
-            <div className="stat-info">
-              <h2>$3.87K</h2>
-              <p>Total Earnings</p>
-            </div>
-          </div>
+          {/* Total Companies */}
+          <StatCard
+            icon="bi-buildings"
+            color="red"
+            value="12"
+            label="Companies Using Service"
+          />
 
-          <div className="stat-card-4">
-            <div className="start-card-4-container">
-              <div className="icon-4 dark-green">
-                <i class="bi bi-cash-coin"></i>
-              </div>
-              <div className="stat-info">
-                <h2>
-                  $862.43 <span>Earn</span>
-                </h2>
-                <p>
-                  Total Trip <strong>23</strong>
-                </p>
-              </div>
-            </div>
-            <hr />
-            <div className="start-card-4-container">
-              <div className="icon-4 purple">
-                <i class="bi bi-cash-coin"></i>
-              </div>
-              <div className="stat-info">
-                <h2>
-                  $862.43 <span>Earn</span>
-                </h2>
-                <p>
-                  Total Trip <strong>23</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          {/* Total Earnings */}
+          <StatCard
+            icon="bi-currency-exchange"
+            color="orange"
+            value="$34.2K"
+            label="Total Earnings"
+          />
 
-        <div className="trip-statistics">
-          <div className="tripheader">
-            <h3>
-              Zone-Wise Trip Statistics <span>Total Zone 2</span>
-            </h3>
-            <div>
-              <select>
-                <option>All time</option>
-                <option>Last month</option>
-                <option>Last week</option>
-              </select>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <div className="progress-bar-header">
-              <p>All Over The World</p>
-              <p>69% Trip volume</p>
-            </div>
-            <div className="bar-container">
-              <div className="bar red" style={{ width: "69%" }}></div>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <div className="progress-bar-header">
-              <p>Asia</p>
-              <p>27% Trip volume</p>
-            </div>
-            <div className="bar-container">
-              <div className="bar yellow" style={{ width: "27%" }}></div>
-            </div>
-          </div>
+          {/* Total Trips */}
+          <StatCard
+            icon="bi bi-car-front-fill"
+            color="blue"
+            value="1,220"
+            label="Total Trips"
+          />
+
+          {/* Ongoing Trips */}
+          <StatCard
+            icon="bi-hourglass-split"
+            color="purple"
+            value="18"
+            label="Ongoing Trips"
+          />
+
+          {/* Cancelled Trips */}
+          <StatCard
+            icon="bi-x-circle-fill"
+            color="red"
+            value="42"
+            label="Cancelled Trips"
+          />
+
+          {/* Ratings */}
+          <StatCard
+            icon="bi-star-fill"
+            color="yellow"
+            value="4.6/5"
+            label="Average Rating"
+          />
         </div>
       </div>
+
       {/* -------------- */}
 
       {/* ---------------- */}
+      <div className="trip-statistics">
+        <div className="tripheader">
+          <h3>
+            Zone-Wise Trip Statistics <span>Total Zone 2</span>
+          </h3>
+          <div>
+            <select>
+              <option>All time</option>
+              <option>Last month</option>
+              <option>Last week</option>
+            </select>
+          </div>
+        </div>
+        <div className="progress-bar">
+          <div className="progress-bar-header">
+            <p>All Over The World</p>
+            <p>69% Trip volume</p>
+          </div>
+          <div className="bar-container">
+            <div className="bar red" style={{ width: "69%" }}></div>
+          </div>
+        </div>
+        <div className="progress-bar">
+          <div className="progress-bar-header">
+            <p>Asia</p>
+            <p>27% Trip volume</p>
+          </div>
+          <div className="bar-container">
+            <div className="bar yellow" style={{ width: "27%" }}></div>
+          </div>
+        </div>
+      </div>
       <div className="dashboard-transaction-container">
         <LeaderBoard type={"Driver"} />
         <RecentTransactions />

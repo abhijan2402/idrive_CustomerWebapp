@@ -1,17 +1,22 @@
 .driver-levels-container {
-    background-color: #f2fafa;
+    background-color: var(--primary-color);
     padding: 20px;
+    border: 0.5px solid var(--secondary-color);
+    margin-bottom: 14px;
 }
 
-.diver-levels-header{
+.diver-levels-header {
     display: flex;
     justify-content: space-between;
 }
-
-.title {
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
+.diver-levels-header select{
+    font-size: 12px;
+}
+.diver-levels-header .title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--secondary-color);
 }
 
 .level-info {
@@ -31,11 +36,11 @@
     background: white;
     border-radius: 10px;
     padding: 15px;
-    width: 260px;
+    width: 180px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.level-name {
+.level-card .level-name {
     color: #009688;
     font-size: 16px;
     font-weight: bold;
