@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DriverLevels.css";
 
 const levels = [
@@ -47,7 +47,7 @@ const levels = [
   },
 ];
 
-const DriverLevels = () => {
+const DriverLevels = ({ item, activeTab }) => {
   return (
     <div className="driver-levels-container">
       <div className="diver-levels-header">
@@ -62,7 +62,14 @@ const DriverLevels = () => {
       </div>
       <div className="levels-wrapper">
         {levels.map((level) => (
-          <div key={level.id} className="level-card">
+          <div
+            key={level.id}
+            className={`level-card ${
+              level.name !== "All Trip" && activeTab === level.name
+                ? "active"
+                : ""
+            }`}
+          >
             <div className="level-info">
               <div>
                 <h3 className="level-name">{level.name}</h3>

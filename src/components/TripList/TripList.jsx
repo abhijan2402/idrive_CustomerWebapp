@@ -24,6 +24,7 @@ const TripList = () => {
     "Pending",
     "Accepted",
     "Completed",
+    "Ongoing",
     "Cancelled",
     "Returning",
     "Returned",
@@ -44,7 +45,7 @@ const TripList = () => {
         ))}
       </div>
 
-      <DriverLevels />
+      <DriverLevels item={item} activeTab={activeTab} />
 
       <h3>All Trips</h3>
       <div className="filter-utilities">

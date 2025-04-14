@@ -72,7 +72,6 @@ const CompleteRegistration = () => {
     window.open(digilockerUrl, "_blank", "width=500,height=600");
   };
 
-
   return (
     <div className="login-form d-block">
       <div className="login-wrap">
@@ -454,7 +453,6 @@ const CompleteRegistration = () => {
                               onChange={handleFileChange}
                               required
                             />
-                            
                           </div>
 
                           <div className="form-group">

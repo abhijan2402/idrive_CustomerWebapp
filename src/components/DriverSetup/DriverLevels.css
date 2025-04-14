@@ -45,7 +45,9 @@
     font-size: 16px;
     font-weight: bold;
 }
-
+.active{
+    background-color: #00968730;
+}
 .level-icon {
     width: 40px;
     height: 40px;
