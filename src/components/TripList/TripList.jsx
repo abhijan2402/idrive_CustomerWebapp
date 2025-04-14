@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import DriverLevels from "../DriverSetup/DriverLevelDash";
+import { tripData } from "../../../dummydata";
 
 const TripList = () => {
   const location = useLocation();
@@ -75,6 +76,7 @@ const TripList = () => {
           </button>
         </div>
       </div>
+
       <div className="trip-border">
         <table>
           <thead>
@@ -96,20 +98,29 @@ const TripList = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td colSpan="14" className="no-data">
-                <div className="no-data-message">
-                  <div className="icon-table">⚠️</div>
-                  No data available
-                </div>
-              </td>
-            </tr>
+            {tripData.map((trip, index) => (
+              <tr key={trip.id}>
+                <td>{index + 1}</td>
+                <td>{trip.tripId}</td>
+                <td>{trip.date}</td>
+                <td>{trip.customer}</td>
+                <td>{trip.driver}</td>
+                <td>{trip.tripType}</td>
+                <td>${trip.tripCost.toFixed(2)}</td>
+                <td>${trip.couponDiscount.toFixed(2)}</td>
+                <td>${trip.additionalFee.toFixed(2)}</td>
+                <td>${trip.totalCost.toFixed(2)}</td>
+                <td>${trip.adminCommission.toFixed(2)}</td>
+                <td>{trip.paymentStatus}</td>
+                <td>{trip.tripStatus}</td>
+                <td>
+                  <button className="action-btn-view">View</button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
-      {/* <div className="settings-icon">
-        <FaCog />
-      </div> */}
     </div>
   );
 };
