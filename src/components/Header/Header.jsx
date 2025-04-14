@@ -41,6 +41,12 @@ const Header = ({ isCollapsed, setIsCollapsed }) => {
               <p onClick={handleLogout}>Sign Out</p>
             </div>
           </div>
+
+          <div className="registration-btn">
+            <button onClick={() => navigate("/registration")}>
+              Complete Registration
+            </button>
+          </div>
         </div>
       </div>
     </header>

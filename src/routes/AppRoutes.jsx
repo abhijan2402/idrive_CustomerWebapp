@@ -29,7 +29,6 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/login" element={<LoginForm />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/registration" element={<CompleteRegistration />} />
 
       {/* Protected Routes with Layout */}
       <Route
@@ -41,6 +40,8 @@ const AppRoutes = () => {
       >
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/heatmap" element={<TripHeatMap />} />
+        <Route path="/registration" element={<CompleteRegistration />} />
+
         <Route path="/fleetview" element={<UserLiveView />} />
         <Route path="/triplist" element={<Trip />} />
         <Route path="/parcelrefund" element={<RefundRequestList />} />

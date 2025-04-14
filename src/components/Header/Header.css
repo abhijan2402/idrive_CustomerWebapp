@@ -7,6 +7,21 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.registration-btn button {
+    outline: none;
+    font-size: 14px;
+    padding: 8px 8px;
+    border: none;
+    background-color: var(--button-color);
+    border-radius: 4px;
+    color: var(--button-text-color);
+    transition: 0.5s all ease-in-out;
+}
+
+.registration-btn button:hover {
+    background-color: var(--button-hover-color);
+}
+
 .header-menubar i {
     font-size: 24px;
     cursor: pointer;
