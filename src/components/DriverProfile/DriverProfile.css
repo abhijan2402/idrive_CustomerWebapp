@@ -1,0 +1,205 @@
+.driver-profile {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0fdfa;
+    padding: 20px;
+    color: #1f2937;
+}
+
+.driver-id {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.driver-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.top-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.driver-info .info {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-section .section-title {
+    color: #0f766e;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* flex-wrap: wrap; */
+}
+
+.stat-box1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+    flex: 1;
+    min-width: 120px;
+    border-radius: 8px;
+    background: #f0fdfa;
+    text-align: center;
+}
+.stat-box {
+    padding: 10px;
+    flex: 1;
+    min-width: 120px;
+    border-radius: 8px;
+    background: #f0fdfa;
+    text-align: center;
+}
+
+.stat-box-2 {
+    display: flex;
+    gap: 10px;
+}
+.stat-box1 h5 {
+    font-size: 14px;
+    margin: 0;
+}
+.stat-box h5 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.stat-box p {
+    font-size: 13px;
+    color: #555;
+}
+
+.stat-box.blue {
+    border: 1px solid #3b82f6;
+    background: #e0f2fe;
+}
+
+.stat-box.green {
+    border: 1px solid #10b981;
+    background: #d1fae5;
+}
+
+.stat-box.red {
+    border: 1px solid #ef4444;
+    background: #fee2e2;
+}
+
+.stat-box.orange {
+    border: 1px solid #f59e0b;
+    background: #fef3c7;
+}
+
+.wallet-section .wallet-box {
+    width: 100%;
+}
+
+.wallet-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.wallet-card {
+    flex: 1;
+    min-width: 180px;
+    padding: 15px;
+    background: #ecfdf5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wallet-card h3 {
+    font-size: 22px;
+    margin: 5px 0;
+    color: #0f766e;
+}
+
+.bottom-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bottom-left {
+    flex: 2;
+}
+
+.bottom-right {
+    flex: 1;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 6px 12px;
+    border: none;
+    background: #f0fdfa;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tabs .active {
+    background: #14b8a6;
+    color: white;
+    font-weight: 600;
+}
+
+.trip-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    font-size: 14px;
+}
+
+.trip-label {
+    font-weight: 500;
+    margin-top: 10px;
+    color: #374151;
+}
+
+.trip-value {
+    font-weight: 500;
+    color: #0f766e;
+    text-align: right;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0fdfa;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.download-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}

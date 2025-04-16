@@ -2,9 +2,15 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     background: #f8fcfb;
-    height: 100vh;
 }
 
+.trip_id{
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+.trip_id:hover{
+    color: var(--secondary-color);
+}
 .trip-list-container h2 {
     font-size: 20px;
 }

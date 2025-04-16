@@ -23,6 +23,9 @@ import CustomerLevelSetup from "../pages/CustomerLevelSetup";
 import AddCustomer from "../components/CustomerLevelSetup/AddCustomer";
 import CompleteRegistration from "../components/Signup/CompleteRegistration";
 import Trip from "../pages/Trip";
+import TripSummary from "../components/Triplog/TripSummary";
+import CustomerProfile from "../components/CustomerProfile/CustomerProfile";
+import DriverProfile from "../components/DriverProfile/DriverProfile";
 
 const AppRoutes = () => {
   return (
@@ -39,12 +42,15 @@ const AppRoutes = () => {
         }
       >
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/tripsummary" element={<TripSummary />} />
         <Route path="/heatmap" element={<TripHeatMap />} />
         <Route path="/registration" element={<CompleteRegistration />} />
         <Route path="/fleetview" element={<UserLiveView />} />
         <Route path="/triplist" element={<Trip />} />
         <Route path="/parcelrefund" element={<RefundRequestList />} />
         <Route path="/profile" element={<UpdateProfile />} />
+        <Route path="/customerprofile" element={<CustomerProfile />} />
+        <Route path="/driverprofile" element={<DriverProfile />} />
         <Route path="/transactionlist" element={<TransactionList />} />
         {/* Driver Setup */}
         <Route path="/driver/level" element={<DriverLevel />} />

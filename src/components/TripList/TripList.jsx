@@ -8,11 +8,12 @@ import {
   FaFilter,
   FaCog,
 } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import DriverLevels from "../DriverSetup/DriverLevelDash";
 import { tripData } from "../../../dummydata";
 
 const TripList = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const item = queryParams.get("item");
@@ -46,7 +47,9 @@ const TripList = () => {
         ))}
       </div>
 
-      <DriverLevels item={item} activeTab={activeTab} />
+      {activeTab === "All Trips" && (
+        <DriverLevels item={item} activeTab={activeTab} />
+      )}
 
       <h3>All Trips</h3>
       <div className="filter-utilities">
@@ -101,10 +104,25 @@ const TripList = () => {
             {tripData.map((trip, index) => (
               <tr key={trip.id}>
                 <td>{index + 1}</td>
-                <td>{trip.tripId}</td>
+                <td
+                  onClick={() => navigate("/tripsummary")}
+                  className="trip_id"
+                >
+                  {trip.tripId}
+                </td>
                 <td>{trip.date}</td>
-                <td>{trip.customer}</td>
-                <td>{trip.driver}</td>
+                <td
+                  onClick={() => navigate("/customerprofile")}
+                  className="trip_id"
+                >
+                  {trip.customer}
+                </td>
+                <td
+                  onClick={() => navigate("/driverprofile")}
+                  className="trip_id"
+                >
+                  {trip.driver}
+                </td>
                 <td>{trip.tripType}</td>
                 <td>${trip.tripCost.toFixed(2)}</td>
                 <td>${trip.couponDiscount.toFixed(2)}</td>
