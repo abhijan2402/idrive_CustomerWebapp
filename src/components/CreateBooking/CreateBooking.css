@@ -1,0 +1,97 @@
+.booking-container {
+    max-width: 600px;
+    width: 40%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-container h2 {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-size: 12px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 0.2rem;
+    outline: none;
+}
+
+.stop-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.add-stop,
+.remove-stop {
+    border: none;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-stop-btn {
+    color: aliceblue;
+    padding: 10px 10px;
+}
+
+.confirm-booking {
+    display: flex;
+    justify-content: center;
+}
+
+.add-another-stop {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.submit-booking {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.input-group-text {
+    font-size: 12px;
+}
+
+.finding-driver {
+    margin-top: 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.driver-animation {
+    width: 180px;
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

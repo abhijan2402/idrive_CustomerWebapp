@@ -26,6 +26,8 @@ import Trip from "../pages/Trip";
 import TripSummary from "../components/Triplog/TripSummary";
 import CustomerProfile from "../components/CustomerProfile/CustomerProfile";
 import DriverProfile from "../components/DriverProfile/DriverProfile";
+import CreateBooking from "../components/CreateBooking/CreateBooking";
+import BookRide from "../pages/BookRide";
 
 const AppRoutes = () => {
   return (
@@ -47,10 +49,11 @@ const AppRoutes = () => {
         <Route path="/registration" element={<CompleteRegistration />} />
         <Route path="/fleetview" element={<UserLiveView />} />
         <Route path="/triplist" element={<Trip />} />
+        <Route path="/bookride" element={<BookRide />} />
         <Route path="/parcelrefund" element={<RefundRequestList />} />
         <Route path="/profile" element={<UpdateProfile />} />
         <Route path="/customerprofile" element={<CustomerProfile />} />
-        <Route path="/driverprofile" element={<DriverProfile />} />
+        <Route path="/driverprofile/:id" element={<DriverProfile />} />
         <Route path="/transactionlist" element={<TransactionList />} />
         {/* Driver Setup */}
         <Route path="/driver/level" element={<DriverLevel />} />

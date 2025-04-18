@@ -76,6 +76,16 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
             >
               <i className="bi bi-menu-down"></i> Dashboard
             </li>
+            <li
+              className={activeItem === "Book Ride" ? "active" : ""}
+              onClick={() => {
+                setActiveItem("Bookride"),
+                  setIsCollapsed(!isCollapsed),
+                  navigate("/bookride");
+              }}
+            >
+              <i className="bi bi-menu-down"></i> Book Ride
+            </li>
 
             <li
               className={activeItem === "fleetview" ? "active" : ""}
@@ -579,6 +589,8 @@ const Aside = ({ setIsCollapsed, isCollapsed }) => {
             </ul>
           </ul>
         </div>
+
+        {/* ------------ VEHICLES MANAGEMENT--------------- */}
 
         {/* ------------TRANSACTION & REPORT--------------- */}
         <div className="dashboard-items">

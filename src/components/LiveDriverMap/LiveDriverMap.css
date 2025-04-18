@@ -1,0 +1,28 @@
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.map-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.map-container-wrapper {
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.view-details-btn{
+    padding: 4px 25px;
+}
+.view-contianer strong{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
