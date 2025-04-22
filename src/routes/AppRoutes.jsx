@@ -28,6 +28,7 @@ import CustomerProfile from "../components/CustomerProfile/CustomerProfile";
 import DriverProfile from "../components/DriverProfile/DriverProfile";
 import CreateBooking from "../components/CreateBooking/CreateBooking";
 import BookRide from "../pages/BookRide";
+import BookingForm from "../components/CreateBooking/BookingForm";
 
 const AppRoutes = () => {
   return (
@@ -50,6 +51,7 @@ const AppRoutes = () => {
         <Route path="/fleetview" element={<UserLiveView />} />
         <Route path="/triplist" element={<Trip />} />
         <Route path="/bookride" element={<BookRide />} />
+        <Route path="/bookride-form" element={<BookingForm />} />
         <Route path="/parcelrefund" element={<RefundRequestList />} />
         <Route path="/profile" element={<UpdateProfile />} />
         <Route path="/customerprofile" element={<CustomerProfile />} />
